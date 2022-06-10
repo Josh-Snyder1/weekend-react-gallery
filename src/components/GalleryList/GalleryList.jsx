@@ -1,15 +1,19 @@
-function GalleryList( {GalleryItem}) {
+function GalleryList( {galleryList, GalleryItem}) {
 
+    console.log('in GalleryList',galleryList);
+    // const newGalList = [galleryList];
+    // console.log('newGal', newGalList);
 
     return (
-        <div>
-            <p>text1</p>
-            <GalleryItem />
+        <div className="gallery-list">
+            {galleryList.map((image) => 
+                <GalleryItem
+                    key={image.id}
+                    image={image}
+                />
+            )}
         </div>
-
-    )
-
-
-}
+    );
+};
 
 export default GalleryList;

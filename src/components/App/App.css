@@ -13,3 +13,39 @@
   font-size: 1.5em;
 }
 
+.gallery-list {
+  display: flex;
+}
+
+.gallery-item {
+  display: flexbox;
+  justify-content: center;
+  width: 150px;
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.gallery-image {
+  width: 150px;
+  height: 150px;
+}
+
+.love-it-btn {
+  width: 140px;
+  height: 30px;
+  background-color: lightpink;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.love-it-btn: {
+  cursor: pointer;
+}
+
+/* .MuiImage {
+  background-color: blue;
+} */
+
