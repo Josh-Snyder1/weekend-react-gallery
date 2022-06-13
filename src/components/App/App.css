@@ -50,3 +50,11 @@
   background-color: rgba(236, 236, 236,  .5) ;
   display: none;
 }
+
+.description:hover {
+  display: unset;
+}
+
+div#description:hover {
+  display: unset;
+}
