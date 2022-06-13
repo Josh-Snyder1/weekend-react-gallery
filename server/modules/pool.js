@@ -2,15 +2,15 @@
 const pg = require('pg');
 
 // Setup PG to connect to the database
-const Pool = pg.Pool;
+const Pool;
 
-const pool = new Pool({
-    database: 'react_gallery', // database name (this will change)
-    host: 'localhost', // where to find the database
-    port: 5432,        // port for finding the database
-    max: 10,           // max number of connections for the pool
-    idleTimeoutMillis: 30000 // 30 seconds before timeout/cancel query
-});
+// const pool = new Pool({
+//     database: 'react_gallery', // database name (this will change)
+//     host: 'localhost', // where to find the database
+//     port: 5432,        // port for finding the database
+//     max: 10,           // max number of connections for the pool
+//     idleTimeoutMillis: 30000 // 30 seconds before timeout/cancel query
+// });
 
 // Listener setup on the pool isn't required, 
 // but can be super handy for troubleshooting.
@@ -30,10 +30,11 @@ if (process.env.DATABASE_URL) {
     })
 }
 else {
+    pool = new pg.Pool({
     host: 'localhost',
     port: 5432,
     database: 'react_gallery'
+    })
 }
 
 module.exports = pool;
-
