@@ -18,9 +18,6 @@ pool.on('connect', () => {
     console.log('Connected to the database');
 });
 
-pool.on('error', (error) => {
-    console.log('Error with database pool', error);
-});
 
 if (process.env.DATABASE_URL) {
     pool = new pg.Pool({
