@@ -14,10 +14,6 @@ let pool;
 
 // Listener setup on the pool isn't required, 
 // but can be super handy for troubleshooting.
-pool.on('connect', () => {
-    console.log('Connected to the database');
-});
-
 
 if (process.env.DATABASE_URL) {
     pool = new pg.Pool({
