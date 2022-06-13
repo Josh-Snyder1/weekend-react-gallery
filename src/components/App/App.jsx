@@ -69,14 +69,17 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
+        <div className='appBody'>
         <ImageInput addImage={addImage} />
-        <p>Gallery goes here</p>
+        <p>Hover over images to see description</p>
         {galleryList.length > 0 &&
         <GalleryList
           galleryList={galleryList}
           GalleryItem={GalleryItem}
           updateLikes={updateLikes}
         />}
+        </div>
+        
       </div>
     );
 }

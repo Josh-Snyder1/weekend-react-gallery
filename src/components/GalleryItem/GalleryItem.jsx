@@ -25,9 +25,11 @@ function GalleryItem ({image, updateLikes}) {
                 <img src={image.path} 
                     className="gallery-image" 
                 />
+                <div className="btn-and-likes">
                 <button className="love-it-btn" onClick={() => updateLikes(image.id,image.likes)} >Love It!</button>
 
                 <p>{image.likes} People Love This</p>
+                </div>
                 {/* <MuiImage 
                 image={image}/> */}
             </div>

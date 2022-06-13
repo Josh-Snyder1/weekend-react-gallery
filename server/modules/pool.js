@@ -22,4 +22,18 @@ pool.on('error', (error) => {
     console.log('Error with database pool', error);
 });
 
+if (process.env.DATABASE_URL) {
+    pool = new pg.Pool({
+        connectionString: process.env.DATABASE_URL,
+        //Heroku fails without this
+        ssl: { rejectUnauthorized: false }
+    })
+}
+else {
+    host: 'localhost',
+    port: 5432,
+    database: 'react_gallery'
+}
+
 module.exports = pool;
+
