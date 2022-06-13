@@ -40,3 +40,13 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.description {
+  position: absolute;
+  width: 150px;
+  font-weight:bolder;
+  color: #000;
+  text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+  background-color: rgba(236, 236, 236,  .5) ;
+  display: none;
+}

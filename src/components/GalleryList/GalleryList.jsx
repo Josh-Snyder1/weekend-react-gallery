@@ -1,4 +1,4 @@
-function GalleryList( {galleryList, GalleryItem}) {
+function GalleryList( {galleryList, GalleryItem, updateLikes}) {
 
     console.log('in GalleryList',galleryList);
     // const newGalList = [galleryList];
@@ -10,6 +10,7 @@ function GalleryList( {galleryList, GalleryItem}) {
                 <GalleryItem
                     key={image.id}
                     image={image}
+                    updateLikes={updateLikes}
                 />
             )}
         </div>

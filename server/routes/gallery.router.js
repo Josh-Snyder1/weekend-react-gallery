@@ -45,4 +45,19 @@ router.get('/', (req, res) => {
         })
 }); // END GET Route
 
+router.post('/', (req, res) => {
+    const image = req.body;
+    const sqlText = `INSERT INTO images ("path", "description")
+                     VALUES ($1, $2)`;
+    pool.query(sqlText, [image.imagePath, image.imageDescription])
+        .then((result) => {
+            console.log(`Added item to the database`, image);
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${sqlText}`, error);
+            res.sendStatus(500);
+        })
+});
+
 module.exports = router;
