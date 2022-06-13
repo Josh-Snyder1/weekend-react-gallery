@@ -4,9 +4,9 @@
 function GalleryItem ({image, updateLikes}) {
 
     function makeVisable() {
-        console.log('in makeVisable')
+        console.log('in makeVisable',image.id)
         var element = document.getElementById("description");
-        element.style.display = "";
+        element.style.display = "unset";
     }
 
     console.log('in GalleryItem',image)
@@ -14,7 +14,7 @@ function GalleryItem ({image, updateLikes}) {
         <>
             
             <div className="gallery-item">
-                <div className="description" id="description" >{image.description}</div>
+                <div className="description" id="descrciption" >{image.description}</div>
                 <img src={image.path} 
                     className="gallery-image" 
                     onMouseOver={() => makeVisable()}
