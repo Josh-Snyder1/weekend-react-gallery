@@ -2,7 +2,7 @@
 const pg = require('pg');
 
 // Setup PG to connect to the database
-let Pool;
+let pool;
 
 // const pool = new Pool({
 //     database: 'react_gallery', // database name (this will change)
